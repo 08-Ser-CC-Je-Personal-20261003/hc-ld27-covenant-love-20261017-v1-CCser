@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>主与我们立爱约</title>
+<meta name="description" content="海德堡要理问答主日27 · 创世记17章 · 欧陆改革宗讲章：主与我们建立爱的关系">
+<style>
+:root{
+  --bg:#f4f1ea;--bg2:#e9e3d6;--ink:#1f2330;--muted:#5d6475;--card:rgba(255,255,255,.62);--line:rgba(30,35,50,.12);
+  --gold:#b8862b;--crim:#a3262a;--blue:#1f5fa8;--green:#2e7d4f;--purple:#6b3fa0;--teal:#0f7c86;
+  --hl-gold:#fff1c9;--hl-red:#fde1e1;--hl-blue:#ddeafc;--hl-green:#dcf2e4;--hl-purple:#ece2fa;
+  --shadow:0 10px 30px rgba(30,30,60,.10);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12141c;--bg2:#1a1d28;--ink:#e9e6df;--muted:#a3a8b8;--card:rgba(30,34,48,.62);--line:rgba(255,255,255,.10);
+  --gold:#e0b25a;--crim:#ef6b6f;--blue:#6aa8ff;--green:#5fd18f;--purple:#b38cf0;--teal:#4fd0da;
+  --hl-gold:rgba(224,178,90,.18);--hl-red:rgba(239,107,111,.18);--hl-blue:rgba(106,168,255,.16);--hl-green:rgba(95,209,143,.16);--hl-purple:rgba(179,140,240,.16);
+  --shadow:0 10px 30px rgba(0,0,0,.4);}}
+:root[data-theme="dark"]{
+  --bg:#12141c;--bg2:#1a1d28;--ink:#e9e6df;--muted:#a3a8b8;--card:rgba(30,34,48,.62);--line:rgba(255,255,255,.10);
+  --gold:#e0b25a;--crim:#ef6b6f;--blue:#6aa8ff;--green:#5fd18f;--purple:#b38cf0;--teal:#4fd0da;
+  --hl-gold:rgba(224,178,90,.18);--hl-red:rgba(239,107,111,.18);--hl-blue:rgba(106,168,255,.16);--hl-green:rgba(95,209,143,.16);--hl-purple:rgba(179,140,240,.16);
+  --shadow:0 10px 30px rgba(0,0,0,.4);}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.85;font-size:16.5px;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20%;z-index:-1;background:
+ radial-gradient(40% 35% at 15% 10%,rgba(184,134,43,.22),transparent 70%),
+ radial-gradient(35% 30% at 85% 20%,rgba(31,95,168,.18),transparent 70%),
+ radial-gradient(40% 35% at 70% 90%,rgba(163,38,42,.14),transparent 70%),
+ radial-gradient(30% 30% at 10% 80%,rgba(46,125,79,.14),transparent 70%);animation:drift 28s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(3%,-2%,0) scale(1.05)}}
+a{color:var(--blue)}
+.serif{font-family:"Songti SC","Noto Serif SC","STSong",serif}
+/* progress */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;background:linear-gradient(90deg,var(--gold),var(--crim),var(--blue))}
+/* top bar */
+.top{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:10px;padding:10px 16px;background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border-bottom:1px solid var(--line)}
+.top .t{font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
+.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:14px;cursor:pointer;backdrop-filter:blur(10px);transition:.25s}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+/* layout */
+.wrap{display:flex;width:100%}
+nav#toc{position:sticky;top:52px;height:calc(100vh - 52px);width:290px;flex:0 0 290px;overflow:auto;padding:14px 10px 40px;border-right:1px solid var(--line);background:color-mix(in srgb,var(--bg) 55%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transition:margin .35s cubic-bezier(.2,.8,.2,1)}
+body.toc-off nav#toc{margin-left:-290px}
+nav#toc a{display:block;padding:5px 10px;border-radius:8px;color:var(--ink);text-decoration:none;font-size:14px;line-height:1.5;transition:.2s}
+nav#toc a.sub{padding-left:26px;color:var(--muted);font-size:13px}
+nav#toc a:hover,nav#toc a.on{background:var(--hl-gold);color:var(--ink)}
+main{flex:1;min-width:0;padding:0 clamp(16px,3vw,48px) 80px}
+@media(max-width:900px){nav#toc{position:fixed;left:0;top:52px;z-index:45;margin-left:-290px;box-shadow:var(--shadow)}body.toc-on nav#toc{margin-left:0}body.toc-off nav#toc{margin-left:-290px}}
+/* hero */
+.hero{margin:22px 0 10px;padding:clamp(26px,5vw,60px);border-radius:28px;position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,#2a1a0c 0%,#5b2b17 35%,#1f3b6b 100%)}
+.hero h1{font-size:clamp(28px,5.5vw,56px);line-height:1.2;margin:.2em 0;letter-spacing:.04em}
+.hero .k{display:inline-block;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);margin:4px 6px 4px 0;font-size:13px}
+.hero svg.stars{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none}
+.tw{animation:tw 3s ease-in-out infinite}
+@keyframes tw{50%{opacity:.15}}
+/* sections */
+section{scroll-margin-top:64px;margin:34px 0}
+h2{font-size:clamp(22px,3.2vw,32px);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+h2 .n{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;color:#fff;font-size:18px;flex:0 0 40px}
+h3{font-size:clamp(18px,2.4vw,22px);margin:22px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(16px,2.6vw,28px);box-shadow:var(--shadow);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.hl-g{background:var(--hl-gold);padding:0 .2em;border-radius:4px}
+.hl-r{background:var(--hl-red);padding:0 .2em;border-radius:4px}
+.hl-b{background:var(--hl-blue);padding:0 .2em;border-radius:4px}
+.hl-gr{background:var(--hl-green);padding:0 .2em;border-radius:4px}
+.hl-p{background:var(--hl-purple);padding:0 .2em;border-radius:4px}
+.c-g{color:var(--gold)}.c-r{color:var(--crim)}.c-b{color:var(--blue)}.c-gr{color:var(--green)}.c-p{color:var(--purple)}.c-t{color:var(--teal)}
+b.key{color:var(--crim)}
+.tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;font-weight:600;margin-right:4px;vertical-align:middle}
+.t-key{background:var(--hl-red);color:var(--crim)}.t-hard{background:var(--hl-purple);color:var(--purple)}.t-mem{background:var(--hl-green);color:var(--green)}
+blockquote{margin:14px 0;padding:14px 18px;border-left:4px solid var(--gold);background:var(--hl-gold);border-radius:0 14px 14px 0}
+blockquote.conf{border-color:var(--blue);background:var(--hl-blue)}
+blockquote .src{display:block;font-size:13px;color:var(--muted);margin-top:6px}
+.qa{border-radius:16px;padding:16px 18px;margin:12px 0;background:var(--card);border:1px solid var(--line)}
+.qa .q{font-weight:700;color:var(--blue)}
+.qa .a{margin-top:6px}
+.fn{font-size:13px;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+.tbl{overflow-x:auto;border-radius:14px;border:1px solid var(--line)}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:color-mix(in srgb,var(--gold) 18%,transparent);white-space:nowrap}
+tr:hover td{background:var(--hl-gold)}
+svg{max-width:100%;height:auto;display:block}
+.svgbox{width:100%;overflow:hidden;border-radius:16px}
+.svgbox text{font-family:inherit}
+/* point banners */
+.pt{border-radius:22px;padding:clamp(18px,3vw,30px);margin:18px 0;position:relative;overflow:hidden}
+.pt::after{content:attr(data-n);position:absolute;right:12px;top:-18px;font-size:120px;font-weight:900;opacity:.08;line-height:1}
+.pt1{background:linear-gradient(135deg,var(--hl-gold),transparent)}
+.pt2{background:linear-gradient(135deg,var(--hl-red),transparent)}
+.pt3{background:linear-gradient(135deg,var(--hl-green),transparent)}
+.pt4{background:linear-gradient(135deg,var(--hl-blue),transparent)}
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tab{border:1px solid var(--line);background:var(--card);padding:7px 14px;border-radius:999px;cursor:pointer;color:var(--ink);font-size:14px}
+.tab.on{background:var(--ink);color:var(--bg)}
+.pane{display:none}.pane.on{display:block;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.creed{font-size:18px;line-height:2.1}
+.creed p{margin:.4em 0}
+.recite .hide{filter:blur(6px);transition:.3s;cursor:pointer}
+.recite .hide:hover,.recite .hide.show{filter:none}
+details{border:1px solid var(--line);border-radius:14px;padding:10px 16px;margin:10px 0;background:var(--card)}
+summary{cursor:pointer;font-weight:700;list-style:none}
+summary::before{content:"▸ ";color:var(--gold);transition:.2s;display:inline-block}
+details[open] summary::before{transform:rotate(90deg)}
+.flash{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.fc{perspective:900px;height:150px;cursor:pointer}
+.fc .in{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.fc.flip .in{transform:rotateY(180deg)}
+.fc .f,.fc .b{position:absolute;inset:0;border-radius:16px;padding:14px;display:grid;place-items:center;text-align:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--line)}
+.fc .f{background:var(--card);font-weight:700;font-size:17px}
+.fc .b{background:var(--hl-gold);transform:rotateY(180deg);font-size:14px;line-height:1.6}
+.loop{animation:spin 40s linear infinite;transform-origin:center;transform-box:fill-box}
+@keyframes spin{to{transform:rotate(360deg)}}
+.dash{stroke-dasharray:6 6;animation:dash 1.5s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-24}}
+.pulse{animation:pulse 2.4s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes pulse{50%{transform:scale(1.06)}}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 10px}
+#totop{position:fixed;right:16px;bottom:18px;z-index:40;width:44px;height:44px;border-radius:50%;padding:0;display:grid;place-items:center;font-size:18px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+@media print{nav#toc,.top,#totop{display:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div class="top">
+  <button class="btn" id="tocBtn" aria-label="目录">☰ 目录</button>
+  <div class="t">📖 主与我们建立爱的关系 · 海德堡主日27 · 创17</div>
+  <button class="btn" id="themeBtn" aria-label="切换主题">🌓</button>
+</div>
+<div class="wrap">
+<nav id="toc" aria-label="目录">
+  <a href="#hero">🏠 封面与崇拜程序</a>
+  <a href="#memory">⚡ 30秒记忆卡</a>
+  <a href="#bg">🗺️ 一、历史背景与处境</a>
+  <a class="sub" href="#bg-map">亚伯拉罕的路线图</a>
+  <a class="sub" href="#bg-time">救赎历史时间轴</a>
+  <a href="#hc">📜 二、主日27原文与位置</a>
+  <a href="#text">🔍 三、创17 逐节细读</a>
+  <a href="#big">🌌 四、跳出框架：整本圣经</a>
+  <a href="#p1">👑 五、要点1：出于神</a>
+  <a href="#p2">🩸 六、要点2：由宝血印证</a>
+  <a href="#p3">👶 七、要点3：包括儿女</a>
+  <a href="#p4">🙏 八、要点4：凭信心回应</a>
+  <a href="#angles">🔭 九、多角度解读</a>
+  <a href="#loops">♾️ 十、四重闭环</a>
+  <a class="sub" href="#mind">思维导图</a>
+  <a href="#disc">💬 十一、讨论题与答案</a>
+  <a href="#ext">🧭 十二、拓展与反驳</a>
+  <a href="#sum">📋 十三、总结列表</a>
+  <a href="#creeds">✝️ 十四、三大信经背诵版</a>
+  <a href="#cmp">⚖️ 十五、三信经深度对比</a>
+  <a href="#forms">🏛️ 十六、三项联合信条相关原文</a>
+  <a href="#quiz">🎯 十七、自测小测验</a>
+  <a href="#refs">🔗 参考来源</a>
+</nav>
+<main>
+
+<!-- HERO -->
+<section id="hero">
+<div class="hero reveal">
+<svg class="stars" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <g fill="#fff">
+  <circle class="tw" cx="60" cy="40" r="1.6"/><circle class="tw" cx="140" cy="90" r="1.1" style="animation-delay:.6s"/><circle class="tw" cx="230" cy="30" r="1.8" style="animation-delay:1.2s"/>
+  <circle class="tw" cx="320" cy="120" r="1.2"/><circle class="tw" cx="420" cy="50" r="2" style="animation-delay:.3s"/><circle class="tw" cx="520" cy="100" r="1.3" style="animation-delay:1.7s"/>
+  <circle class="tw" cx="610" cy="35" r="1.7" style="animation-delay:.9s"/><circle class="tw" cx="700" cy="85" r="1.2"/><circle class="tw" cx="760" cy="140" r="1.6" style="animation-delay:2.1s"/>
+  <circle class="tw" cx="90" cy="170" r="1.1" style="animation-delay:1.4s"/><circle class="tw" cx="470" cy="170" r="1.5" style="animation-delay:.2s"/><circle class="tw" cx="660" cy="200" r="1.1" style="animation-delay:1s"/>
+  <circle class="tw" cx="360" cy="220" r="1.4" style="animation-delay:2.4s"/><circle class="tw" cx="200" cy="250" r="1.2" style="animation-delay:.5s"/><circle class="tw" cx="560" cy="260" r="1.8" style="animation-delay:1.9s"/>
+  </g>
+</svg>
+<div style="position:relative">
+<div style="font-size:14px;opacity:.85">欧陆改革宗讲章 · 海德堡要理问答 主日 27（第72–74问）</div>
+<h1 class="serif">主与我们<br>建立爱的关系</h1>
+<div style="font-size:clamp(15px,2vw,18px);opacity:.92;margin-bottom:12px">“我要与你并你世世代代的后裔坚定我的约，作永远的约，是要作你和你后裔的神。”（创17:7）</div>
+<span class="k">👑 出于神</span><span class="k">🩸 由宝血印证</span><span class="k">👶 包括儿女</span><span class="k">🙏 凭信心回应</span>
+</div></div>
+
+<div class="grid" style="margin-top:16px">
+ <div class="card reveal"><h3 style="margin-top:0">🎵 诗歌</h3>
+  <ul style="margin:0;padding-left:20px"><li>圣诗 第19首</li><li>韵诗 第25篇 1–5节</li><li>韵诗 第30篇</li><li>韵诗 第1篇</li><li>圣诗 第9首</li></ul>
+  <p class="fn">诗篇25篇“耶和华的路都是慈爱诚实，向那遵守他的约和他法度的人”——立约之爱正是本讲主题。</p></div>
+ <div class="card reveal"><h3 style="margin-top:0">📖 读经</h3><p style="margin:0">创世记 17 章（全章）<br>辅读：罗4:9–12；西2:11–13；徒2:38–39</p></div>
+ <div class="card reveal"><h3 style="margin-top:0">🧭 一句话主旨</h3><p style="margin:0"><b class="key">立约之爱</b>不是我们向神伸手，而是<span class="hl-g">神俯身向我们</span>：他起头、他用血印证、他把我们的儿女包括在内，并呼召我们凭信心活出这关系。</p></div>
+</div>
+</section>
+
+<!-- MEMORY -->
+<section id="memory" class="reveal">
+<h2><span class="n" style="background:var(--crim)">⚡</span>30秒记忆卡（点击翻转）</h2>
+<div class="flash">
+ <div class="fc"><div class="in"><div class="f">👑 出于神<br><small>谁起头？</small></div><div class="b">“我是全能的神……我就与你立约”（17:1–2）。约是单方面的恩典起头、双方面的生活关系。</div></div></div>
+ <div class="fc"><div class="in"><div class="f">🩸 由宝血印证<br><small>凭什么确定？</small></div><div class="b">割礼流血 → 指向基督“断绝生命”的十字架；洗礼是“基督的割礼”（西2:11）。</div></div></div>
+ <div class="fc"><div class="in"><div class="f">👶 包括儿女<br><small>给谁？</small></div><div class="b">“你和你世世代代的后裔”（17:7）。主日27问74：婴孩与父母同属神的圣约和教会。</div></div></div>
+ <div class="fc"><div class="in"><div class="f">🙏 凭信心回应<br><small>我该怎样？</small></div><div class="b">“你当在我面前作完全人”（17:1）。亚伯拉罕俯伏、笑、顺服——当日就行割礼（17:23）。</div></div></div>
+ <div class="fc"><div class="in"><div class="f">🔑 口诀</div><div class="b"><b>神起头 · 血盖印 · 子孙同 · 信来应</b><br>罪（我们不配）→ 救赎（血约）→ 感恩（顺服的一生）</div></div></div>
+ <div class="fc"><div class="in"><div class="f">📌 主日27三问</div><div class="b">72 水能除罪吗？不能，唯血与灵。<br>73 为何称“重生的洗”？教导+保证。<br>74 婴孩要受洗吗？是的。</div></div></div>
+</div>
+</section>
+
+<!-- BACKGROUND -->
+<section id="bg">
+<h2 class="reveal"><span class="n" style="background:var(--gold)">1</span>历史背景：作者、受众、年代、处境</h2>
+<div class="grid">
+ <div class="card reveal"><h3 style="margin-top:0">✍️ 作者</h3><p>传统与改革宗一致认定<b>摩西</b>为五经作者（参约5:46；路24:27），在圣灵默示下写成。</p></div>
+ <div class="card reveal"><h3 style="margin-top:0">👥 原初受众</h3><p>出埃及、立西奈约后在旷野漂流的<b>以色列第一代、第二代</b>。他们刚刚在吉甲之前尚未行割礼（书5:2–9），需要知道：<span class="hl-g">“我们为什么是神的百姓？”</span></p></div>
+ <div class="card reveal"><h3 style="margin-top:0">⏳ 事件年代</h3><p>亚伯拉罕约生活于主前2000年左右（中期青铜时代早期）。创17发生时他<b>99岁</b>，以实玛利13岁，距12章蒙召已<b>24年</b>，距16章夏甲事件<b>13年</b>（16:16→17:1）。</p></div>
+ <div class="card reveal"><h3 style="margin-top:0">🧩 当时情景</h3><p>13年的“沉默”。夏甲之事显出亚伯兰想用<span class="hl-r">肉体的办法</span>成就应许。撒莱89岁、经期已断（18:11）。人的力量已到尽头——神偏偏此时显现，说：<b>“我是全能的神（El Shaddai）。”</b></p></div>
+</div>
+
+<div class="card reveal" style="margin-top:16px">
+<h3 style="margin-top:0">🏛️ 古代近东背景：两类约</h3>
+<div class="tbl"><table>
+<tr><th>类型</th><th>特征</th><th>圣经对应</th></tr>
+<tr><td><b>宗主-附庸约</b>（Suzerain-Vassal）</td><td>大王自我介绍→历史序言→条款→记号→祝福咒诅</td><td>创17结构：“我是全能的神”→应许→“你当”→割礼→“剪除”</td></tr>
+<tr><td><b>王室赐予约</b>（Royal Grant）</td><td>君王因恩惠单方赐予土地/王朝给忠仆，世代承受</td><td>“我要将迦南全地赐给你和你的后裔永远为业”（17:8）</td></tr>
+</table></div>
+<p class="fn">创17把两者熔于一炉：<span class="hl-g">恩典的赐予</span>（王室约）+ <span class="hl-b">关系的义务</span>（宗主约）。这正是改革宗所讲“恩典之约单方面设立、双方面施行”。</p>
+</div>
+
+<h3 class="reveal" id="bg-map">🗺️ 亚伯拉罕的路线图（吾珥 → 哈兰 → 迦南）</h3>
+<div class="card reveal svgbox">
+<svg viewBox="0 0 800 380" role="img" aria-label="古代近东地图：吾珥、哈兰、迦南">
+ <defs><linearGradient id="sea" x1="0" x2="1"><stop offset="0" stop-color="#7fb2d9"/><stop offset="1" stop-color="#a9cde6"/></linearGradient>
+ <linearGradient id="land" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8d9b5"/><stop offset="1" stop-color="#d6c08f"/></linearGradient></defs>
+ <rect width="800" height="380" fill="url(#land)"/>
+ <path d="M0 120 C60 130 90 170 110 230 C120 280 100 330 80 380 L0 380Z" fill="url(#sea)"/>
+ <text x="20" y="250" font-size="13" fill="#1d4c74">大海（地中海）</text>
+ <path d="M720 300 C740 320 770 340 800 345 L800 380 L700 380 C705 350 710 320 720 300Z" fill="url(#sea)"/>
+ <text x="690" y="372" font-size="12" fill="#1d4c74">波斯湾</text>
+ <path d="M380 40 C430 90 500 150 560 210 C610 260 670 290 720 305" stroke="#3d7fb8" stroke-width="3" fill="none"/>
+ <text x="560" y="190" font-size="12" fill="#2b5f8e" transform="rotate(35 560 190)">幼发拉底河</text>
+ <path d="M470 30 C520 90 590 160 640 220 C680 260 700 280 720 300" stroke="#3d7fb8" stroke-width="2" fill="none" opacity=".7"/>
+ <text x="600" y="150" font-size="12" fill="#2b5f8e" transform="rotate(42 600 150)">底格里斯河</text>
+ <path d="M150 170 L150 260" stroke="#3d7fb8" stroke-width="2"/>
+ <path class="dash" d="M700 295 C600 220 480 110 400 70 C320 40 250 70 200 120 C170 150 160 190 155 230" stroke="#a3262a" stroke-width="3.5" fill="none"/>
+ <g><circle class="pulse" cx="700" cy="295" r="9" fill="#a3262a"/><text x="640" y="330" font-size="15" font-weight="700" fill="#5b1a1c">吾珥 Ur</text></g>
+ <g><circle class="pulse" cx="400" cy="70" r="9" fill="#b8862b"/><text x="410" y="62" font-size="15" font-weight="700" fill="#5b3f10">哈兰 Haran</text></g>
+ <g><circle class="pulse" cx="160" cy="215" r="10" fill="#2e7d4f"/><text x="172" y="210" font-size="15" font-weight="700" fill="#1d4f31">迦南 · 幔利（希伯仑）</text><text x="172" y="230" font-size="12" fill="#1d4f31">创17 立约之地附近</text></g>
+ <g transform="translate(560,20)"><rect width="225" height="80" rx="10" fill="rgba(255,255,255,.75)"/>
+ <text x="12" y="24" font-size="13" fill="#333">🔴 吾珥：拜月神的城（书24:2）</text>
+ <text x="12" y="46" font-size="13" fill="#333">🟡 哈兰：他拉卒于此（11:32）</text>
+ <text x="12" y="68" font-size="13" fill="#333">🟢 迦南：应许之地（17:8）</text></g>
+</svg>
+</div>
+
+<h3 class="reveal" id="bg-time">⏳ 救赎历史时间轴：约的展开</h3>
+<div class="card reveal svgbox">
+<svg viewBox="0 0 900 230" role="img" aria-label="圣约时间轴">
+ <line x1="30" y1="110" x2="870" y2="110" stroke="var(--muted)" stroke-width="3"/>
+ <g font-size="13" text-anchor="middle">
+ <circle cx="70" cy="110" r="14" fill="#6b3fa0"/><text x="70" y="80" fill="var(--ink)" font-weight="700">创3:15</text><text x="70" y="145" fill="var(--muted)">原始福音</text><text x="70" y="163" fill="var(--muted)">女人的后裔</text>
+ <circle cx="190" cy="110" r="14" fill="#0f7c86"/><text x="190" y="80" fill="var(--ink)" font-weight="700">挪亚之约</text><text x="190" y="145" fill="var(--muted)">彩虹为记</text><text x="190" y="163" fill="var(--muted)">“你和你的后裔”</text>
+ <circle class="pulse" cx="330" cy="110" r="20" fill="#a3262a"/><text x="330" y="74" fill="var(--crim)" font-weight="800">亚伯拉罕之约</text><text x="330" y="150" fill="var(--ink)" font-weight="700">创15 + 创17</text><text x="330" y="168" fill="var(--muted)">割礼为记 ★本讲</text>
+ <circle cx="470" cy="110" r="14" fill="#b8862b"/><text x="470" y="80" fill="var(--ink)" font-weight="700">西奈之约</text><text x="470" y="145" fill="var(--muted)">律法、逾越节</text><text x="470" y="163" fill="var(--muted)">“记念亚伯拉罕的约”</text>
+ <circle cx="600" cy="110" r="14" fill="#1f5fa8"/><text x="600" y="80" fill="var(--ink)" font-weight="700">大卫之约</text><text x="600" y="145" fill="var(--muted)">永远的王位</text>
+ <circle cx="720" cy="110" r="14" fill="#2e7d4f"/><text x="720" y="80" fill="var(--ink)" font-weight="700">新约（耶31）</text><text x="720" y="145" fill="var(--muted)">基督的血</text><text x="720" y="163" fill="var(--muted)">洗礼·圣餐</text>
+ <circle cx="840" cy="110" r="14" fill="#e0b25a"/><text x="840" y="80" fill="var(--ink)" font-weight="700">新天新地</text><text x="840" y="145" fill="var(--muted)">“神要亲自</text><text x="840" y="163" fill="var(--muted)">作他们的神”启21:3</text>
+ </g>
+ <text x="450" y="215" font-size="13" text-anchor="middle" fill="var(--muted)">同一个恩典之约 · 不同施行阶段 · 一个中保基督</text>
+</svg>
+</div>
+</section>
+
+<!-- HC -->
+<section id="hc">
+<h2 class="reveal"><span class="n" style="background:var(--blue)">2</span>主日27原文与它在要理问答中的位置</h2>
+<div class="card reveal">
+<p class="fn">以下原文逐字引自 ccifellowship.org《海德堡要理问答》主日27。</p>
+<div class="qa"><div class="q">72．问：外在的水洗能除去罪吗？</div><div class="a">答：不能。唯有耶稣基督的宝血和圣灵才能洗去我们一切的罪1。</div><div class="fn">1. 太3:11； 彼前3:21； 约壹1:7</div></div>
+<div class="qa"><div class="q">73．问：既然如此，圣灵为什么称洗礼是重生和除罪的洗呢？</div><div class="a">答：神如此说是有充分理由的。他要教导我们，基督的宝血和圣灵洗去我们一切的罪，正如水洗去身体上的污秽一样1。但更重要的是，他要藉此神圣的保证和标志使我们确信，我们灵魂中的罪污确实得以洗除，正如我们身体上的污秽被水洗去一样2。</div><div class="fn">1. 林前6:11； 启1:5；7:14　2. 可16:16； 徒2:38； 罗6:3-4； 加3:27</div></div>
+<div class="qa"><div class="q">74．问：婴孩也要受洗吗？</div><div class="a">答：是的，因为他们与父母同属于神的圣约和教会1。藉着基督的宝血，神将得救的恩典和赐人信心的圣灵应许给了他们，正如应许给他们的父母一样2。因此，藉着洗礼这一圣约记号，婴孩也必须被纳入基督的教会，从而从非信徒的儿女中被分别出来3。在旧约中，这是藉着割礼完成的4，而在新约时代，割礼已被洗礼所取代5。</div><div class="fn">1. 创17:7； 太19:14　2. 诗22:10； 赛44:1-3； 徒2:38-39；16:31　3. 徒10:47； 林前7:14　4. 创17:9-14　5. 西2: 11-13</div></div>
+</div>
+
+<div class="card reveal svgbox" style="margin-top:16px">
+<svg viewBox="0 0 900 200" role="img" aria-label="海德堡要理问答结构">
+ <g font-size="14" text-anchor="middle">
+ <rect x="20" y="40" width="220" height="90" rx="16" fill="var(--hl-red)" stroke="var(--crim)"/><text x="130" y="75" fill="var(--crim)" font-weight="800">第一部 罪与愁苦</text><text x="130" y="100" fill="var(--muted)">主日 2–4</text>
+ <rect x="280" y="40" width="340" height="90" rx="16" fill="var(--hl-gold)" stroke="var(--gold)"/><text x="450" y="70" fill="var(--gold)" font-weight="800">第二部 得救（主日 5–31）</text><text x="450" y="94" fill="var(--muted)">信经 → 称义 → 圣言与圣礼(25) → 洗礼(26–27)</text><text x="450" y="116" fill="var(--crim)" font-weight="800">★ 主日27：婴孩洗礼</text>
+ <rect x="660" y="40" width="220" height="90" rx="16" fill="var(--hl-green)" stroke="var(--green)"/><text x="770" y="75" fill="var(--green)" font-weight="800">第三部 感恩</text><text x="770" y="100" fill="var(--muted)">主日 32–52</text>
+ <path class="dash" d="M240 85 L280 85 M620 85 L660 85" stroke="var(--ink)" stroke-width="2.5"/>
+ <text x="450" y="170" fill="var(--muted)">主日25（第65问）：信心由圣灵藉福音生发，藉圣礼坚固 → 主日26：洗礼的意义 → 主日27：洗礼的对象</text>
+ </g>
+</svg>
+</div>
+<blockquote class="reveal">🔑 <b>为什么主日27接着讲婴孩？</b> 主日26说洗礼是神的应许“印”在我们身上。若洗礼首先是<span class="hl-g">神的应许</span>而非<span class="hl-r">人的表现</span>，那么神既把应许给了信徒的儿女（创17:7；徒2:39），就理当把印记也给他们。婴孩洗礼是“恩典优先”最清楚的画面。</blockquote>
+</section>
+
+<!-- TEXT -->
+<section id="text">
+<h2 class="reveal"><span class="n" style="background:var(--teal)">3</span>创世记17章：结构与逐节细读</h2>
+<div class="card reveal svgbox">
+<svg viewBox="0 0 900 250" role="img" aria-label="创17交错结构">
+ <g font-size="14">
+ <rect x="20" y="20" width="860" height="36" rx="10" fill="var(--hl-purple)"/><text x="40" y="44" fill="var(--purple)" font-weight="700">A 1–2　神显现：“我是全能的神……我就与你立约”</text>
+ <rect x="60" y="66" width="780" height="36" rx="10" fill="var(--hl-gold)"/><text x="80" y="90" fill="var(--gold)" font-weight="700">B 3–8　神的应许：多国之父 · 改名亚伯拉罕 · 作你和后裔的神 · 迦南为业</text>
+ <rect x="100" y="112" width="700" height="36" rx="10" fill="var(--hl-red)"/><text x="120" y="136" fill="var(--crim)" font-weight="800">C 9–14　核心：约的记号——割礼（第八日 · 家中男丁 · 违约者剪除）</text>
+ <rect x="60" y="158" width="780" height="36" rx="10" fill="var(--hl-gold)"/><text x="80" y="182" fill="var(--gold)" font-weight="700">B′ 15–22　撒拉改名 · 以撒应许 · 以实玛利蒙福但约立在以撒</text>
+ <rect x="20" y="204" width="860" height="36" rx="10" fill="var(--hl-green)"/><text x="40" y="228" fill="var(--green)" font-weight="700">A′ 23–27　人回应：“正当那日”亚伯拉罕与全家受割礼</text>
+ </g>
+</svg>
+</div>
+
+<div class="grid" style="margin-top:16px">
+<div class="card reveal"><h3 style="margin-top:0">17:1 <span class="c-p">“我是全能的神”</span></h3><p><b>El Shaddai</b>：在人绝境中施行能力的神。紧接着命令：<span class="hl-b">“你当在我面前作完全人”</span>——“完全”（tamim）不是无罪，而是<b>全心、无分裂地向着神</b>，与16章的“另找办法”正相反。</p></div>
+<div class="card reveal"><h3 style="margin-top:0">17:2 <span class="c-g">“我就与你立约”</span></h3><p>希伯来文“给（natan）我的约”——约是<b>赐</b>的，不是谈判出来的。15章已“立”（karat，切）约，17章是<b>确认与扩展</b>：加上记号、名字和世代。</p></div>
+<div class="card reveal"><h3 style="margin-top:0">17:5 改名</h3><p>亚伯兰（尊贵之父）→ <b>亚伯拉罕</b>（多国之父）。在一个儿子都还没有（应许之子）时，神先给他一个“多国”的名字——<span class="hl-g">神称无为有</span>（罗4:17）。</p></div>
+<div class="card reveal"><h3 style="margin-top:0">17:7 <span class="c-r">约的心脏</span></h3><p>“<b>作你和你后裔的神</b>”——这是全本圣经的<span class="hl-r">立约公式</span>：“我要作你们的神，你们要作我的子民。”约的本质是<b>关系</b>，是神把自己赐给我们。</p></div>
+<div class="card reveal"><h3 style="margin-top:0">17:10–12 记号</h3><p>“这就是我与你……所立的约”——记号与所表之物紧密相连（圣礼的“圣礼性联合”）。<b>第八日</b>：婴孩毫无贡献，完全被动地领受，恩典在前。</p></div>
+<div class="card reveal"><h3 style="margin-top:0">17:14 剪除</h3><p>约有<span class="hl-r">咒诅</span>的一面：拒绝记号=“背了我的约”。割礼本身就是自我咒诅的象征：“若我不忠，愿我被剪除”。这剪除最终落在<b>基督</b>身上（赛53:8“从活人之地被剪除”）。</p></div>
+<div class="card reveal"><h3 style="margin-top:0">17:17 笑</h3><p>亚伯拉罕俯伏而<b>笑</b>——敬拜中夹杂着软弱。神没有收回约，反而给孩子起名<b>以撒（他笑）</b>。神把人的怀疑之笑变成救恩之笑（21:6）。</p></div>
+<div class="card reveal"><h3 style="margin-top:0">17:18–21 以实玛利</h3><p>“但愿以实玛利活在你面前。”神赐福以实玛利，但“<b>我的约我要与以撒坚定</b>”——约不是靠血统自然延伸，而是按<span class="hl-p">应许与拣选</span>（罗9:7–9）。</p></div>
+<div class="card reveal"><h3 style="margin-top:0">17:23 “正当那日”</h3><p>99岁老人当天顺服。信心的回应是<span class="hl-gr">即时、全家、具体</span>的。雅各书说：“亚伯拉罕因行为称义”——显明他的信是活的。</p></div>
+</div>
+</section>
+
+<!-- BIG PICTURE -->
+<section id="big">
+<h2 class="reveal"><span class="n" style="background:var(--purple)">4</span>跳出框架：创17在整本圣经中的位置</h2>
+<div class="card reveal">
+<p>创17不是孤立的“宗教仪式说明”，它是<b>立约公式</b>的源头之一，贯穿全本圣经：</p>
+<div class="tbl"><table>
+<tr><th>经文</th><th>立约公式的回响</th><th>与创17的关联</th></tr>
+<tr><td>出6:7</td><td>“我要以你们为我的百姓，我也要作你们的神”</td><td>出埃及是因为神“记念亚伯拉罕的约”（出2:24）</td></tr>
+<tr><td>申30:6</td><td>“耶和华你神必将你心里和你后裔心里的污秽除掉（心里受割礼）”</td><td>肉体割礼一开始就指向<b>心的割礼</b></td></tr>
+<tr><td>耶31:33</td><td>“我要作他们的神，他们要作我的子民”</td><td>新约不是废掉亚伯拉罕约，而是<b>成全</b>它</td></tr>
+<tr><td>结36:25–28</td><td>“我必用清水洒在你们身上……你们要作我的子民”</td><td>水洗、新心、立约公式三者合一 → 洗礼</td></tr>
+<tr><td>路1:72–73</td><td>撒迦利亚：“记念他的圣约，就是他对我们祖宗亚伯拉罕所起的誓”</td><td>基督降生 = 亚伯拉罕之约的应验</td></tr>
+<tr><td>徒2:39</td><td>“这应许是给你们和你们的儿女”</td><td>五旬节彼得用创17的“世代”逻辑</td></tr>
+<tr><td>罗4:11</td><td>“他受了割礼的记号，作他未受割礼的时候因信称义的印证”</td><td>割礼是<b>信心之义的印证</b>，不是功德</td></tr>
+<tr><td>加3:29</td><td>“你们既属乎基督，就是亚伯拉罕的后裔，是照着应许承受产业的”</td><td>“后裔”最终是<b>基督</b>（加3:16）及在他里面的人</td></tr>
+<tr><td>西2:11–12</td><td>“你们在他里面也受了不是人手所行的割礼……你们既受洗与他一同埋葬”</td><td>洗礼 = 基督的割礼（主日27问74经文5）</td></tr>
+<tr><td>启21:3</td><td>“他要与人同住，他们要作他的子民，神要亲自与他们同在，作他们的神”</td><td>立约公式的<b>终极成全</b></td></tr>
+</table></div>
+</div>
+<div class="card reveal svgbox" style="margin-top:16px">
+<svg viewBox="0 0 900 260" role="img" aria-label="割礼到洗礼的连续与不连续">
+ <g font-size="14" text-anchor="middle">
+ <rect x="20" y="30" width="330" height="200" rx="20" fill="var(--hl-red)" stroke="var(--crim)"/>
+ <text x="185" y="62" font-weight="800" fill="var(--crim)" font-size="17">旧约 · 割礼</text>
+ <text x="185" y="92" fill="var(--ink)">流血的记号（预表将要流的血）</text>
+ <text x="185" y="118" fill="var(--ink)">男丁 · 第八日</text>
+ <text x="185" y="144" fill="var(--ink)">以色列一族</text>
+ <text x="185" y="170" fill="var(--ink)">指向心的割礼（申30:6）</text>
+ <text x="185" y="196" fill="var(--muted)">影儿</text>
+ <rect x="550" y="30" width="330" height="200" rx="20" fill="var(--hl-blue)" stroke="var(--blue)"/>
+ <text x="715" y="62" font-weight="800" fill="var(--blue)" font-size="17">新约 · 洗礼</text>
+ <text x="715" y="92" fill="var(--ink)">不流血的记号（血已流尽）</text>
+ <text x="715" y="118" fill="var(--ink)">男女同受（加3:28）</text>
+ <text x="715" y="144" fill="var(--ink)">万国万民（太28:19）</text>
+ <text x="715" y="170" fill="var(--ink)">表明重生与洗净（多3:5）</text>
+ <text x="715" y="196" fill="var(--muted)">实体已来</text>
+ <circle class="pulse" cx="450" cy="130" r="62" fill="var(--hl-gold)" stroke="var(--gold)" stroke-width="2"/>
+ <text x="450" y="122" font-weight="800" fill="var(--gold)" font-size="16">基督</text>
+ <text x="450" y="146" fill="var(--ink)" font-size="12">被“剪除”的那一位</text>
+ <path class="dash" d="M350 130 L388 130 M512 130 L550 130" stroke="var(--ink)" stroke-width="3"/>
+ <text x="450" y="250" fill="var(--muted)">同一个约 · 同一个应许 · 同一个中保 · 同样包括儿女</text>
+ </g>
+</svg>
+</div>
+</section>
+
+<!-- POINT 1 -->
+<section id="p1">
+<h2 class="reveal"><span class="n" style="background:var(--gold)">👑</span>要点一：这圣约出于神</h2>
+<div class="pt pt1 reveal" data-n="1">
+<p class="serif" style="font-size:20px;margin-top:0"><b>“我就与你立约”</b> —— 动词的主语永远是神。</p>
+<p>请注意17章中“我”出现的密度：<span class="hl-g">我是…我就与你立约…我要使你…我要与你坚定我的约…我要作你的神…我要将迦南赐给你…我要赐福给她……</span> 神一口气说了十几个“我要”。亚伯拉罕在这一章说的话只有两句：一句带着笑的怀疑（17:17），一句为以实玛利的恳求（17:18）。</p>
+<p><b class="key">救赎的起点不在人的寻求，而在神的俯就。</b> 99岁、绝育的身体、13年的沉默、夏甲事件的失败——神偏偏选在<span class="hl-r">人一切可能都死掉的时候</span>立约，好叫荣耀全归给他。</p>
+</div>
+<blockquote class="conf reveal">“这一切不是洗礼之水所带来的功效，而是靠着神的儿子流宝血成就的。”<span class="src">——《比利时信条》第三十四条（ccifellowship.org）</span></blockquote>
+<div class="grid">
+<div class="card reveal"><h3 style="margin-top:0">🎯 本质核心</h3><p>约 = <b>神主动把自己赐给人</b>的爱的关系。不是合同（交换利益），而是<span class="hl-g">婚约式的委身</span>：“我作你的神。”</p></div>
+<div class="card reveal"><h3 style="margin-top:0">📚 多特信经呼应</h3><p>拣选不是“基于神预见我们会信”（第一项第九条标题），恩典之约的源头是神白白的美意（第一项第十条标题“拣选出于神的美意”）。</p></div>
+<div class="card reveal"><h3 style="margin-top:0"><span class="tag t-hard">难点</span>单方面还是双方面？</h3><p>约的<b>设立</b>是单方面（monopleuric）：神定条件、神赐应许；约的<b>施行</b>是双方面（dipleuric）：人蒙召以信心与顺服回应（17:1、9）。二者不矛盾：<span class="hl-b">恩典在前，责任在后，且责任本身也是恩典所生</span>。</p></div>
+</div>
+</section>
+
+<!-- POINT 2 -->
+<section id="p2">
+<h2 class="reveal"><span class="n" style="background:var(--crim)">🩸</span>要点二：这圣约由宝血印证</h2>
+<div class="pt pt2 reveal" data-n="2">
+<p class="serif" style="font-size:20px;margin-top:0"><b>割礼是一道流血的记号。</b></p>
+<p>神为什么不选别的记号？挪亚之约的记号是彩虹，不流血。可亚伯拉罕之约的记号刻在<span class="hl-r">生育后裔的器官上</span>，而且必须<b>流血</b>。这在说两件事：</p>
+<ol>
+<li><b>人的本性需要被“剪除”</b>：从亚当来的生命不能产生应许之子；后裔必须是神所赐。</li>
+<li><b>约的成就需要流血</b>：“若不流血，罪就不得赦免”（来9:22）。创15神独自经过切开的肉块，等于宣告“若约破了，让我承担咒诅”。</li>
+</ol>
+<p>于是，在第八日流血的每一个以色列男婴，都在<span class="hl-g">指向一位将来要被剪除的后裔</span>。基督在出生第八日受了割礼（路2:21），在各各他被“从活人之地剪除”（赛53:8）。<b class="key">他受了约的咒诅，我们就得了约的祝福。</b>（加3:13–14）</p>
+</div>
+<div class="card reveal svgbox">
+<svg viewBox="0 0 900 170" role="img" aria-label="血的流程">
+ <g font-size="14" text-anchor="middle">
+ <rect x="10" y="50" width="150" height="70" rx="14" fill="var(--hl-purple)"/><text x="85" y="80" fill="var(--purple)" font-weight="700">创15</text><text x="85" y="102" fill="var(--ink)" font-size="12">神独行肉块间</text>
+ <rect x="190" y="50" width="150" height="70" rx="14" fill="var(--hl-red)"/><text x="265" y="80" fill="var(--crim)" font-weight="700">创17 割礼</text><text x="265" y="102" fill="var(--ink)" font-size="12">血的记号</text>
+ <rect x="370" y="50" width="150" height="70" rx="14" fill="var(--hl-gold)"/><text x="445" y="80" fill="var(--gold)" font-weight="700">出12/24</text><text x="445" y="102" fill="var(--ink)" font-size="12">逾越血 · 立约血</text>
+ <rect x="550" y="50" width="150" height="70" rx="14" fill="var(--crim)"/><text x="625" y="80" fill="#fff" font-weight="800">十字架</text><text x="625" y="102" fill="#fff" font-size="12">“我立约的血”</text>
+ <rect x="730" y="50" width="160" height="70" rx="14" fill="var(--hl-blue)"/><text x="810" y="80" fill="var(--blue)" font-weight="700">洗礼</text><text x="810" y="102" fill="var(--ink)" font-size="12">血已流 · 水来印证</text>
+ <g stroke="var(--ink)" stroke-width="2.5" class="dash"><path d="M160 85H190M340 85H370M520 85H550M700 85H730"/></g>
+ <text x="450" y="155" fill="var(--muted)">从影儿到实体：血只能流一次（来9:26），所以新约记号是“水”</text>
+ </g>
+</svg>
+</div>
+<div class="grid" style="margin-top:16px">
+<div class="card reveal"><h3 style="margin-top:0">💧 主日27问72的锋芒</h3><p>“外在的水洗能除去罪吗？——<b>不能</b>。”这一刀砍向两边：<br>❌ 罗马天主教的“因行生效”（ex opere operato）<br>❌ 把洗礼当作<span class="hl-r">人的宣誓表演</span><br>✅ 唯有<b>基督的血和圣灵</b>。</p></div>
+<div class="card reveal"><h3 style="margin-top:0">🔏 问73：记号与印证</h3><p>神称洗礼为“重生的洗”，有两层用意：<br>① <b>教导</b>：水洗身体 ≈ 血与灵洗灵魂<br>② <b>保证</b>：“神圣的保证和标志”，使我们<span class="hl-g">确信</span>罪污确实洗除。<br>记号不是空的，也不是魔术，是神的<b>印</b>。</p></div>
+<div class="card reveal"><h3 style="margin-top:0">🌊 比利时信条的画面</h3><p>“他所流的宝血是我们的红海，我们必须穿行红海才能逃脱法老，即撒但的辖制，进入属灵的迦南美地。”——出埃及、割礼、洗礼在血中合一。</p></div>
+</div>
+</section>
+
+<!-- POINT 3 -->
+<section id="p3">
+<h2 class="reveal"><span class="n" style="background:var(--green)">👶</span>要点三：这圣约包括我们的儿女</h2>
+<div class="pt pt3 reveal" data-n="3">
+<p class="serif" style="font-size:20px;margin-top:0"><b>“你和你世世代代的后裔”</b>——17:7、8、9、10、12 一再重复。</p>
+<p>神没有说：“等你的孩子长大能自己决定，我再考虑与他立约。”他命令<b>第八日</b>就给记号。一个八天大的婴孩不能悔改、不能认信、不能理解——但他能<span class="hl-gr">被神认领</span>。这正是恩典的样子：<b>神的应许先于我们的回应</b>。</p>
+<p>海德堡问74的逻辑链条清晰如阶梯：</p>
+</div>
+<div class="card reveal svgbox">
+<svg viewBox="0 0 900 300" role="img" aria-label="问74逻辑阶梯">
+ <g font-size="14">
+ <rect x="20" y="230" width="200" height="55" rx="12" fill="var(--hl-green)" stroke="var(--green)"/><text x="120" y="254" text-anchor="middle" font-weight="700" fill="var(--green)">① 同属圣约与教会</text><text x="120" y="274" text-anchor="middle" fill="var(--muted)" font-size="12">创17:7；太19:14</text>
+ <rect x="240" y="170" width="200" height="55" rx="12" fill="var(--hl-gold)" stroke="var(--gold)"/><text x="340" y="194" text-anchor="middle" font-weight="700" fill="var(--gold)">② 同得应许</text><text x="340" y="214" text-anchor="middle" fill="var(--muted)" font-size="12">救恩与赐信心的圣灵</text>
+ <rect x="460" y="110" width="200" height="55" rx="12" fill="var(--hl-blue)" stroke="var(--blue)"/><text x="560" y="134" text-anchor="middle" font-weight="700" fill="var(--blue)">③ 当受记号</text><text x="560" y="154" text-anchor="middle" fill="var(--muted)" font-size="12">纳入教会、被分别出来</text>
+ <rect x="680" y="50" width="200" height="55" rx="12" fill="var(--hl-red)" stroke="var(--crim)"/><text x="780" y="74" text-anchor="middle" font-weight="700" fill="var(--crim)">④ 割礼→洗礼</text><text x="780" y="94" text-anchor="middle" fill="var(--muted)" font-size="12">西2:11–13</text>
+ <path class="dash" d="M220 250 L240 210 M440 190 L460 150 M660 130 L680 90" stroke="var(--ink)" stroke-width="2.5" fill="none"/>
+ <text x="40" y="60" fill="var(--ink)" font-weight="800" font-size="16">若应许属于他们，</text>
+ <text x="40" y="86" fill="var(--ink)" font-weight="800" font-size="16">印证应许的记号为何不给？</text>
+ </g>
+</svg>
+</div>
+<blockquote class="conf reveal">“神宣告说，信徒的儿女是圣洁的，不是因为他们的本性圣洁，而是因为他们与父母共同承受恩典之约。因此，敬虔的父母不该怀疑在婴幼期被神召回而离世的儿女已蒙了拣选、得了救恩。”<span class="src">——《多特信经》第一项教义第十七条（节选，ccifellowship.org）</span></blockquote>
+<div class="grid">
+<div class="card reveal"><h3 style="margin-top:0"><span class="tag t-key">重点</span>新约更宽，不是更窄</h3><p>若新约把儿女排除在外，那么新约时代的父母反倒比旧约父母少了安慰。但彼得在五旬节说“这应许是给你们和你们的<b>儿女</b>”（徒2:39）；使徒行传多次“全家受洗”（16:15,33；林前1:16）。新约扩大到女子与外邦人，没有缩小到排除孩子。</p></div>
+<div class="card reveal"><h3 style="margin-top:0"><span class="tag t-hard">难点</span>所有受洗婴孩都得救吗？</h3><p>不是自动的。以实玛利受了割礼，以扫也受了割礼（罗9:6–13）。圣约之内有<b>应许</b>也有<b>警告</b>（17:14）。圣约儿女被呼召以信心拥抱所受的应许；若长大后弃绝，便是“背约”，受更重审判（来10:29）。</p></div>
+<div class="card reveal"><h3 style="margin-top:0">🏠 父母的责任</h3><p>在欧陆改革宗婴孩洗礼仪文中，父母要回答：是否承认孩子在基督里成圣、是否承认真道、是否应许<b>尽力教导</b>孩子。亚伯拉罕的使命同样是“吩咐他的众子和他的眷属遵守我的道”（创18:19）。</p></div>
+</div>
+</section>
+
+<!-- POINT 4 -->
+<section id="p4">
+<h2 class="reveal"><span class="n" style="background:var(--blue)">🙏</span>要点四：这圣约呼召我们凭信心回应</h2>
+<div class="pt pt4 reveal" data-n="4">
+<p class="serif" style="font-size:20px;margin-top:0"><b>“你当在我面前作完全人。”（17:1）“你和你的后裔必世世代代遵守我的约。”（17:9）</b></p>
+<p>爱的关系从来不是单向的。神爱我们是<span class="hl-b">先</span>的（约壹4:19），但正因为先爱了我们，他的爱要<b>得着回应</b>。亚伯拉罕的回应有三个层次：</p>
+<div class="grid">
+<div class="card"><b>🧎 俯伏</b>（17:3,17）<br>敬拜：承认神是神。</div>
+<div class="card"><b>😅 带着软弱的信</b>（17:17–18）<br>笑与恳求——神不因软弱撤约。</div>
+<div class="card"><b>⚡ 即时顺服</b>（17:23）<br>“正当那日”，全家受割礼。</div>
+</div>
+<p style="margin-top:12px">对受过洗的我们而言，这回应就是：<b>“改进我们的洗礼”</b>（威斯敏斯特大要理问答第167问的用语）——一生回到洗礼的应许，在试探中说：“我已受洗，我属基督！”</p>
+</div>
+<blockquote class="conf reveal">“此外，洗礼不是仅在我们受洗的那一刻于我们有益，而是使我们终生受益。”<span class="src">——《比利时信条》第三十四条（ccifellowship.org）</span></blockquote>
+<div class="card reveal"><h3 style="margin-top:0">⚖️ 信心不是新律法</h3>
+<div class="tbl"><table>
+<tr><th>错误理解</th><th>纠正</th></tr>
+<tr><td>信心是我为得约而付的“价钱”</td><td>信心是领受约的<b>空手</b>，本身是圣灵所赐（问65）</td></tr>
+<tr><td>婴孩洗礼让孩子“自动得救”，不必回应</td><td>洗礼呼召孩子长大后<b>亲自认信</b>（公开认信礼）</td></tr>
+<tr><td>只有成人自己认信才能领记号</td><td>记号首先是<b>神的应许</b>，而非人的宣告</td></tr>
+<tr><td>顺服是为了保住约</td><td>顺服是<b>感恩</b>，是约中儿女的样式（海德堡第三部）</td></tr>
+</table></div></div>
+</section>
+
+<!-- ANGLES -->
+<section id="angles">
+<h2 class="reveal"><span class="n" style="background:var(--teal)">🔭</span>多角度解读</h2>
+<div class="tabs reveal" data-tabs="ang">
+ <button class="tab on" data-p="a1">⛪ 救赎历史</button><button class="tab" data-p="a2">📜 圣约神学</button><button class="tab" data-p="a3">✝️ 基督中心</button><button class="tab" data-p="a4">🏠 家庭牧养</button><button class="tab" data-p="a5">🌍 宣教</button><button class="tab" data-p="a6">🧠 护教</button>
+</div>
+<div class="card reveal">
+<div class="pane on" id="a1"><p>创17处在“应许—延迟—应验”的张力中：24年的等待使以撒的出生毫无疑问是<b>神迹</b>。这预演了更大的应许之子：童女怀孕（加4:4）。整本圣经的问题“女人的后裔在哪里？”（创3:15）在创17得到一个名字的线索——以撒，最终指向基督。</p></div>
+<div class="pane" id="a2"><p>改革宗区分<b>救赎之约</b>（父与子永恒之约）、<b>行为之约</b>（与亚当）、<b>恩典之约</b>（在基督里与选民及其后裔）。创17是恩典之约在亚伯拉罕时期的施行；它的实质与新约<span class="hl-g">同一</span>（加3:17：律法不能废掉先前立的约），施行方式<span class="hl-b">不同</span>（威斯敏斯特信仰告白7.5–6）。</p></div>
+<div class="pane" id="a3"><p>基督是：真正的亚伯拉罕之<b>后裔</b>（加3:16）；真正<b>受割礼被剪除</b>者（西2:11）；真正“在神面前完全”的人（来4:15）；使万国成为亚伯拉罕之子的<b>中保</b>（罗4:16–17）。</p></div>
+<div class="pane" id="a4"><p>改革宗家庭不是把孩子当作“潜在的宣教对象”，而是<b>圣约儿女</b>：从小教他们祷告“我们在天上的父”，因他们确实被接纳在约里。家庭敬拜、要理问答教学、主日敬拜都是神施行约的工具。</p></div>
+<div class="pane" id="a5"><p>亚伯拉罕被称为“<b>多国</b>之父”（17:5）——立约一开始就有宣教的眼光。家中的外人、买来的仆人也受割礼（17:12–13）。教会今天“使万民作门徒，奉父子圣灵的名给他们施洗”（太28:19），正是创17的扩张。</p></div>
+<div class="pane" id="a6"><p>面对“婴孩洗礼在圣经中没有明文”的质疑：改革宗回应——①圣约的连续性是圣经的大前提；②新约从未撤销儿女在约中的地位；③全家受洗；④林前7:14信徒儿女“圣洁”。举证责任在主张“新约把孩子排除”的一方。</p></div>
+</div>
+</section>
+
+<!-- LOOPS -->
+<section id="loops">
+<h2 class="reveal"><span class="n" style="background:var(--purple)">♾️</span>四重闭环</h2>
+<div class="grid">
+<div class="card reveal svgbox">
+<svg viewBox="0 0 400 400" role="img" aria-label="罪救赎感恩闭环">
+ <g class="loop"><circle cx="200" cy="200" r="150" fill="none" stroke="var(--line)" stroke-width="16"/>
+ <path d="M200 50 A150 150 0 0 1 330 275" fill="none" stroke="var(--crim)" stroke-width="16" stroke-linecap="round"/>
+ <path d="M330 275 A150 150 0 0 1 70 275" fill="none" stroke="var(--gold)" stroke-width="16" stroke-linecap="round"/>
+ <path d="M70 275 A150 150 0 0 1 200 50" fill="none" stroke="var(--green)" stroke-width="16" stroke-linecap="round"/></g>
+ <g font-size="16" text-anchor="middle" font-weight="800">
+ <text x="320" y="130" fill="var(--crim)">罪</text><text x="200" y="385" fill="var(--gold)">救赎</text><text x="70" y="130" fill="var(--green)">感恩</text>
+ <text x="200" y="185" fill="var(--ink)">改革宗闭环</text>
+ <text x="200" y="210" fill="var(--muted)" font-size="12" font-weight="400">99岁的死身 → 血约 →</text>
+ <text x="200" y="228" fill="var(--muted)" font-size="12" font-weight="400">正当那日顺服</text></g>
+</svg></div>
+<div class="card reveal">
+<h3 style="margin-top:0">🔁 救赎历史闭环</h3><p>伊甸失去同在 → 亚伯拉罕“作你的神” → 西奈“住在他们中间” → 道成肉身“以马内利” → 新天新地“神要亲自作他们的神”。<b>起点和终点都是“同在”。</b></p>
+<h3>📜 圣约神学闭环</h3><p>永恒救赎之约（父子）→ 历史中恩典之约（亚伯拉罕）→ 在基督里成就（新约）→ 末日完全实现。<b>一约贯穿。</b></p>
+<h3>📖 经文圣经神学闭环</h3><p>创17:7“作你和你后裔的神” ↔ 徒2:39“给你们和你们的儿女” ↔ 启21:3“作他们的神”。<b>同一句话从头响到尾。</b></p>
+<h3>✝️ 改革宗闭环（罪—救赎—感恩）</h3><p><span class="hl-r">罪</span>：我们靠自己像亚伯兰靠夏甲；<span class="hl-g">救赎</span>：神立约、基督流血、圣灵印证；<span class="hl-gr">感恩</span>：活出洗礼，教养儿女，在神面前作完全人。</p>
+</div>
+</div>
+
+<h3 class="reveal" id="mind">🧠 思维导图</h3>
+<div class="card reveal svgbox">
+<svg viewBox="0 0 960 520" role="img" aria-label="思维导图">
+ <g font-size="13">
+ <g stroke-width="2.5" fill="none">
+  <path d="M480 260 C380 200 300 130 210 100" stroke="var(--gold)"/><path d="M480 260 C580 200 660 130 750 100" stroke="var(--crim)"/>
+  <path d="M480 260 C380 320 300 390 210 420" stroke="var(--green)"/><path d="M480 260 C580 320 660 390 750 420" stroke="var(--blue)"/>
+ </g>
+ <ellipse class="pulse" cx="480" cy="260" rx="130" ry="56" fill="var(--hl-purple)" stroke="var(--purple)" stroke-width="2"/>
+ <text x="480" y="254" text-anchor="middle" font-weight="800" font-size="17" fill="var(--purple)">主与我们建立爱的关系</text>
+ <text x="480" y="278" text-anchor="middle" fill="var(--muted)">创17 · 主日27</text>
+ <rect x="80" y="60" width="260" height="90" rx="16" fill="var(--hl-gold)" stroke="var(--gold)"/>
+ <text x="210" y="86" text-anchor="middle" font-weight="800" fill="var(--gold)" font-size="15">👑 1 出于神</text>
+ <text x="210" y="108" text-anchor="middle" fill="var(--ink)">El Shaddai · “我要”×十余次</text><text x="210" y="128" text-anchor="middle" fill="var(--ink)">改名 · 称无为有 · 单方设立</text>
+ <rect x="620" y="60" width="260" height="90" rx="16" fill="var(--hl-red)" stroke="var(--crim)"/>
+ <text x="750" y="86" text-anchor="middle" font-weight="800" fill="var(--crim)" font-size="15">🩸 2 由宝血印证</text>
+ <text x="750" y="108" text-anchor="middle" fill="var(--ink)">割礼流血 · 剪除 · 十字架</text><text x="750" y="128" text-anchor="middle" fill="var(--ink)">问72–73 · 水不能除罪</text>
+ <rect x="80" y="370" width="260" height="90" rx="16" fill="var(--hl-green)" stroke="var(--green)"/>
+ <text x="210" y="396" text-anchor="middle" font-weight="800" fill="var(--green)" font-size="15">👶 3 包括儿女</text>
+ <text x="210" y="418" text-anchor="middle" fill="var(--ink)">世世代代 · 第八日 · 问74</text><text x="210" y="438" text-anchor="middle" fill="var(--ink)">徒2:39 · 多特I.17 · 比信34</text>
+ <rect x="620" y="370" width="260" height="90" rx="16" fill="var(--hl-blue)" stroke="var(--blue)"/>
+ <text x="750" y="396" text-anchor="middle" font-weight="800" fill="var(--blue)" font-size="15">🙏 4 凭信心回应</text>
+ <text x="750" y="418" text-anchor="middle" fill="var(--ink)">作完全人 · 正当那日</text><text x="750" y="438" text-anchor="middle" fill="var(--ink)">改进洗礼 · 感恩一生</text>
+ <text x="480" y="505" text-anchor="middle" fill="var(--muted)">罪 → 救赎 → 感恩 ｜ 应许 → 记号 → 实体 ｜ 创3:15 → 创17 → 启21:3</text>
+ </g>
+</svg>
+</div>
+</section>
+
+<!-- DISCUSSION -->
+<section id="disc">
+<h2 class="reveal"><span class="n" style="background:var(--crim)">💬</span>讨论题与答案分析</h2>
+<details class="reveal"><summary>Q1 为什么神在亚伯拉罕99岁时才显现立约，而不是更早？</summary>
+<p><b>答：</b>①显明以撒是<span class="hl-g">应许之子</span>而非肉体之子（加4:23）；②16章夏甲事件暴露了人的“自力救赎”，神要先让肉体的盼望死去；③“全能的神”的名号在人的“不能”中才显得清楚（罗4:19–21）。<br><b>应用：</b>你生命中的“13年沉默”可能正是神预备显出他全能的时候。</p></details>
+<details class="reveal"><summary>Q2 割礼和洗礼是“同一回事”吗？有何连续与不连续？</summary>
+<p><b>连续：</b>同一个恩典之约的记号与印证；都表明洗净与归属；都给信徒及其儿女（问74；西2:11–12）。<br><b>不连续：</b>流血→不流血（基督血已流）；男丁→男女；一族→万国；预表→成全。<br><b>结论：</b>洗礼“取代”割礼，不是“废除”它所表明的约。</p></details>
+<details class="reveal"><summary>Q3 婴孩不能信，为什么能受信心的记号？</summary>
+<p><b>答：</b>①亚伯拉罕的记号是“因信称义的印证”（罗4:11），但神照样命令给八天的以撒；可见记号印证的是<span class="hl-b">神的应许</span>，不是受者当下的认知。②问74：神“将得救的恩典和赐人信心的圣灵应许给了他们”。③施洗约翰在母腹中就被圣灵充满（路1:15）；诗22:10“我自出母胎就被交在你手里”。神能在婴孩中作工。</p></details>
+<details class="reveal"><summary>Q4 受了洗的孩子将来离弃信仰，洗礼算什么？</summary>
+<p><b>答：</b>洗礼并非无效，而是成为<span class="hl-r">见证他背约的凭据</span>。约有祝福也有咒诅（17:14）。正如以扫受过割礼，却轻看长子名分（来12:16）。这提醒父母和教会：不要把洗礼当护身符，要殷勤教导，也提醒孩子：你被呼召以信心拥抱你的洗礼。</p></details>
+<details class="reveal"><summary>Q5 “约是单方面的”与“你当在我面前作完全人”如何调和？</summary>
+<p><b>答：</b>神<b>先</b>说“我是全能的神”，<b>后</b>说“你当”。命令建立在身份之上，而非身份建立在命令之上。这正对应海德堡的结构：救赎（第二部）在前，感恩（第三部）在后。我们的顺服不是进入约的门票，而是住在约里的样式。</p></details>
+<details class="reveal"><summary>Q6 以实玛利受了割礼却“约不立在他身上”，这说明什么？</summary>
+<p><b>答：</b>说明有形的约团体与神拣选的选民并不完全重合（罗9:6“从以色列生的不都是以色列人”）。但神仍赐福以实玛利（17:20）——约团体的外在特权是真实的。改革宗因此既不否认圣约儿女的真实特权，也不把外在记号等同于内在重生。</p></details>
+<details class="reveal"><summary>Q7 我已经受洗多年，今天如何“凭信心回应”？</summary>
+<p><b>答：</b>①在内疚中：回到洗礼的应许——“基督的血确实洗净我”（问73）；②在试探中：“我已归入父子圣灵的名，我不属自己”（参问1）；③在家庭中：以祷告、教导、榜样把孩子带到约的主面前；④在教会中：观礼他人受洗时更新自己的委身。</p></details>
+</section>
+
+<!-- EXTENSION -->
+<section id="ext">
+<h2 class="reveal"><span class="n" style="background:var(--teal)">🧭</span>拓展：与其他观点对照</h2>
+<div class="card reveal"><div class="tbl"><table>
+<tr><th>观点</th><th>对洗礼的理解</th><th>对儿女的理解</th><th>改革宗回应</th></tr>
+<tr><td>罗马天主教</td><td>因行生效，洗礼本身除去原罪</td><td>婴孩洗礼使其重生</td><td>问72：外在水洗<b>不能</b>除罪；唯血与灵</td></tr>
+<tr><td>路德宗</td><td>洗礼是使人重生的恩典工具</td><td>婴孩受洗时得信心</td><td>认同婴洗，但强调应许与印证，不把重生绑在水上</td></tr>
+<tr><td>浸信会/重洗派</td><td>信徒认信后的顺服标记</td><td>儿女在新约之外，待认信</td><td>比利时信条34弃绝重洗派；新约连续性；徒2:39</td></tr>
+<tr><td>时代论</td><td>以色列与教会截然二分</td><td>亚伯拉罕约主要属以色列民族</td><td>加3:29：在基督里就是亚伯拉罕的后裔</td></tr>
+<tr><td><b>欧陆改革宗</b></td><td><b>恩典之约的记号与印证</b></td><td><b>与父母同属圣约和教会</b></td><td>海德堡27、比利时34、多特I.17</td></tr>
+</table></div></div>
+<div class="card reveal" style="margin-top:16px"><h3 style="margin-top:0">🔗 威斯敏斯特标准的旁证</h3>
+<p>长老会改革宗与欧陆改革宗在此一致：威斯敏斯特信仰告白第28章第4节教导，不但认信的人，信徒父母一方或双方的婴孩也当受洗；小要理问答第95问同样说明“有形教会成员的婴孩应当受洗”。（此处为内容概述，非原文引用。）</p></div>
+</section>
+
+<!-- SUMMARY -->
+<section id="sum">
+<h2 class="reveal"><span class="n" style="background:var(--gold)">📋</span>总结列表</h2>
+<div class="card reveal"><div class="tbl"><table>
+<tr><th>要点</th><th>创17经文</th><th>主日27</th><th>信条呼应</th><th>基督成全</th><th>生活回应</th></tr>
+<tr><td><span class="c-g">👑 出于神</span></td><td>1–8</td><td>问73 神的教导与保证</td><td>比信34；多特I.9–10</td><td>救赎之约中父差子</td><td>谦卑：救恩全是恩典</td></tr>
+<tr><td><span class="c-r">🩸 宝血印证</span></td><td>10–14</td><td>问72 唯血与灵</td><td>比信34“我们的红海”</td><td>十字架上被剪除</td><td>确据：回到洗礼的应许</td></tr>
+<tr><td><span class="c-gr">👶 包括儿女</span></td><td>7,9,12</td><td>问74 婴孩当受洗</td><td>比信34；多特I.17</td><td>“让小孩子到我这里来”</td><td>教养：家庭敬拜与要理</td></tr>
+<tr><td><span class="c-b">🙏 信心回应</span></td><td>1,9,23</td><td>（承接主日25问65）</td><td>比信34“终生受益”</td><td>完全顺服的第二亚当</td><td>感恩：正当那日顺服</td></tr>
+</table></div></div>
+<div class="card reveal" style="margin-top:16px;text-align:center"><p class="serif" style="font-size:clamp(18px,2.6vw,24px);margin:0"><b>神起头</b> · <b class="c-r">血盖印</b> · <b class="c-gr">子孙同</b> · <b class="c-b">信来应</b></p><p class="fn" style="margin:6px 0 0">十二字记住整篇讲章</p></div>
+</section>
+
+<!-- CREEDS -->
+<section id="creeds">
+<h2 class="reveal"><span class="n" style="background:var(--purple)">✝️</span>三大普世信经 · 干净阅读背诵版</h2>
+<p class="fn reveal">原文逐字引自 ccifellowship.org《普世信经》。开启“背诵模式”后文字模糊，点击单句显示。</p>
+<div class="tabs reveal" data-tabs="cr">
+ <button class="tab on" data-p="c1">使徒信经</button><button class="tab" data-p="c2">尼西亚信经</button><button class="tab" data-p="c3">亚他那修信经</button>
+ <button class="tab" id="reciteBtn" style="margin-left:auto">🧠 背诵模式</button>
+</div>
+<div class="card reveal creed serif" id="creedBox">
+<div class="pane on" id="c1">
+<p>我信神，全能的父，创造天地的主。</p>
+<p>我信我主耶稣基督，神的独生子；因圣灵感孕，从童贞女马利亚所生；在本丢·彼拉多手下受难，被钉在十字架上，受死，被埋葬，降在阴间；第三天从死里复活；他升天，坐在全能父神的右边；将来必从那里降临，审判活人死人。</p>
+<p>我信圣灵。</p>
+<p>我相信圣而公之教会，我相信圣徒相通；</p>
+<p>我相信罪得赦免；</p>
+<p>我相信身体复活；</p>
+<p>我相信永生。阿们！</p>
+</div>
+<div class="pane" id="c2">
+<p>我们信独一的神，全能的父，创造天地及其中可见不可见之万物的主。</p>
+<p>我们信独一主耶稣基督，神的独生子，在万世以前为父所生；出于神且是神，出于光且是光，出于真神且是真神；受生却非被造，与父同质；万物都是藉着他造的。</p>
+<p>为了拯救我们，他从天上降世为人，即藉着从圣灵感孕的童女马利亚道成肉身。 他为了我们，在本丢·彼拉多手下被钉十字架；受难、被埋葬；照着圣经所说，他在第三天复活，并升天、坐在父的右边；将来必在荣耀中再来，审判活人死人；他的国没有穷尽。</p>
+<p>我们信圣灵，赐生命的主，他从父和子而出，与父和子同受敬拜和尊崇；他曾藉众先知说话。</p>
+<p>我们相信世上只有一个圣而公之使徒性教会；</p>
+<p>我们承认印证了罪得赦免的独一洗礼；</p>
+<p>我们盼望从死里复活，以及完全被更新的世界的到来。阿们！</p>
+</div>
+<div class="pane" id="c3" style="font-size:16.5px">
+<p>1) 所有渴慕得救的人都必须持守大公信仰胜过其他一切。2) 人若不信此信仰中的任何一条，都必永远沉沦。</p>
+<p>3) 大公信仰是，我们敬拜一体三位又三位一体的神，4) 其位格不紊，其本质不分，5) 因为父是一位，子是一位，圣灵又是一位；6) 但父、子、圣灵同是一位神，三个位格同荣耀，其威严也同永恒。</p>
+<p>7) 父如何，子就如何，圣灵也如何。8) 父非受造，子非受造，圣灵也非受造。9) 父无限，子无限，圣灵也无限。10) 父永恒，子永恒，圣灵也永恒。11) 父、子、圣灵非三位永恒者，乃一位永恒者；12) 非三位非受造者，乃一位非受造者；非三位无限者，乃一位无限者。13) 同样，父全能，子全能，圣灵也全能；14) 父、子、圣灵非三位全能者，乃一位全能者。</p>
+<p>15) 因此，父是神，子是神，圣灵也是神；16) 但父、子、圣灵非三位神，乃一位神。17) 因此，父是主，子是主，圣灵也是主；18) 但父、子、圣灵非三位主，乃一位主。19) 正如按照基督教真理我们必须承认每一位都既是神又是主一样，20) 按照大公信仰，我们不可说他们是三位神、三位主。</p>
+<p>21) 父是自有的，既非受造，也非受生。22) 子独出于父，非受造，乃是受生。23) 圣灵从父和子而出，非受造，也非受生。24) 因此，只有一位父，非三位父；只有一位子，非三位子；只有一位圣灵，非三位圣灵。25) 父、子、圣灵无先后、无尊卑，26) 同永恒，是平等的三个位格。27) 因此如前所述，在凡事上，一体三位又三位一体的神须同受敬拜。28) 渴慕得救的人必须如此思想三位一体的神。</p>
+<p>29) 同时，要得永远的救赎，就须信道成肉身的主耶稣基督。30) 纯正的信仰就是我们相信并宣告我们的主耶稣基督，神的独生子，既是神又是人。</p>
+<p>31) 他是神，与父同质，受生于未有世界以先；他又是人，与其母同质，生于这世界。32) 他既是完全的神，又是具有人的灵魂和肉体的完全的人；33) 以其神性，他与父同等，以其人性，他低于父。</p>
+<p>34) 尽管既是神又是人，基督仍是一位，而非两位。35) 他是一位，并非因他的神性变为人性，乃是在神性中取了人性；36) 他是一位，并非因两质相混，乃是因神人二性合于一个位格。</p>
+<p>37) 正如人是灵与肉的合一体一样，基督是神与人的合一体。</p>
+<p>38) 基督为救我们而受难，降在阴间，又从死里复活，39) 升天，坐在父的右边，将来必从那里降临，审判活人死人；40) 他降临时，所有死人都必身体复活，供认所行的一切事；41) 行善者必得永生，作恶者必入永火。</p>
+<p>42) 这是大公信仰。人若非坚定不移地相信，就不能得救。阿们!</p>
+</div>
+</div>
+<blockquote class="reveal">🔗 <b>与本讲的连接：</b>尼西亚信经“我们承认印证了罪得赦免的<b>独一洗礼</b>”——正是主日27问73所说洗礼是“神圣的保证和标志”；使徒信经“我信圣而公之教会”——问74说婴孩“被纳入基督的教会”。</blockquote>
+</section>
+
+<!-- COMPARE -->
+<section id="cmp">
+<h2 class="reveal"><span class="n" style="background:var(--blue)">⚖️</span>三大信经深度对比</h2>
+<div class="card reveal"><div class="tbl"><table>
+<tr><th>维度</th><th>使徒信经</th><th>尼西亚信经</th><th>亚他那修信经</th></tr>
+<tr><td>成形年代</td><td>约主后400年罗马教会所用信经为基础，可追溯更早约二百年</td><td>325尼西亚会议；381君士坦丁堡会议正式采纳</td><td>约6世纪上半叶，西方教会，作者不详</td></tr>
+<tr><td>代表</td><td>西方洗礼认信</td><td>东方教会所用信经的代表，东西方共推</td><td>西方；东正教不认可</td></tr>
+<tr><td>要对付的问题</td><td>总结使徒教导，供洗礼、敬拜</td><td>亚流主义否定基督神性；扩充圣灵论</td><td>精确界定三一与基督神人二性</td></tr>
+<tr><td>结构</td><td>三一框架 + 教会与救恩</td><td>三一框架，基督部分大为扩展</td><td>第3–28点三一论；第29–41点基督论</td></tr>
+<tr><td>关键词</td><td>“我信”</td><td>“与父同质”“出于真神且是真神”</td><td>“位格不紊，本质不分”“神人二性合于一个位格”</td></tr>
+<tr><td>洗礼/教会</td><td>圣而公之教会、圣徒相通、罪得赦免</td><td>独一洗礼、使徒性教会</td><td>不直接论及</td></tr>
+<tr><td>语气</td><td>简洁认信，适于敬拜</td><td>会议式、教义护卫</td><td>警示式：“人若不信……不能得救”</td></tr>
+<tr><td>适合场合</td><td>每主日认信、洗礼</td><td>圣餐主日、节期</td><td>教义教学、异端辨析</td></tr>
+</table></div></div>
+<div class="grid" style="margin-top:16px">
+<div class="card reveal"><h3 style="margin-top:0">🟰 共同点</h3><ul><li>三一神框架（父、子、圣灵）</li><li>基督的降生、受难、复活、升天、再来</li><li>末日审判</li><li>被《比利时信条》第9条称为“我们甘愿接受”的信经</li></ul></div>
+<div class="card reveal"><h3 style="margin-top:0">↔️ 差异点</h3><ul><li>使徒：<b>说什么</b>（事实）</li><li>尼西亚：<b>基督是谁</b>（本质）</li><li>亚他那修：<b>如何正确地说</b>（界限）</li></ul></div>
+<div class="card reveal"><h3 style="margin-top:0">❓ 为什么需要三份而非一份？</h3><p>异端每次都在<span class="hl-r">不同的点</span>攻击：先是信仰内容是否完整，再是基督是否真神，再是三与一、神与人如何相关。教会不是增加新教义，而是<b>在受攻击处筑墙</b>。三份信经像三道同心圆城墙：外墙（使徒）、中墙（尼西亚）、内墙（亚他那修），一同守护同一个福音。</p></div>
+</div>
+<div class="card reveal svgbox" style="margin-top:16px">
+<svg viewBox="0 0 600 300" role="img" aria-label="三信经同心圆">
+ <circle cx="300" cy="150" r="135" fill="var(--hl-gold)" stroke="var(--gold)" stroke-width="2"/>
+ <circle cx="300" cy="150" r="95" fill="var(--hl-blue)" stroke="var(--blue)" stroke-width="2"/>
+ <circle class="pulse" cx="300" cy="150" r="55" fill="var(--hl-purple)" stroke="var(--purple)" stroke-width="2"/>
+ <g text-anchor="middle" font-size="14" font-weight="700">
+ <text x="300" y="32" fill="var(--gold)">使徒信经 · 福音事实</text>
+ <text x="300" y="74" fill="var(--blue)">尼西亚 · 基督真神</text>
+ <text x="300" y="145" fill="var(--purple)">亚他那修</text><text x="300" y="165" fill="var(--purple)" font-size="12">三一与二性</text>
+ </g>
+</svg>
+</div>
+</section>
+
+<!-- FORMS -->
+<section id="forms">
+<h2 class="reveal"><span class="n" style="background:var(--green)">🏛️</span>三项联合信条：本讲相关原文</h2>
+<details class="reveal" open><summary>📘 比利时信条 第三十四条 论圣洗礼（全文）</summary>
+<div class="serif" style="line-height:2">
+<p>我们相信并承认，耶稣基督成全了律法（罗10:4），藉着他所流的宝血，他终止了人为了赎罪已经做出的、可能去做的和将要做的一切流血行为；他废除了与血有关的割礼，并设立圣洗礼取代了它1；藉着洗礼，我们归入神的教会，从不信之人和假信仰中被分别出来，身上带着他的标志和印记，完全将自己交托与他2。这是神向我们见证他永远是我们的神、我们恩慈的父。</p>
+<p>出于这个原因，神吩咐说一切属他的人都要用清水受洗归入圣父、圣子、圣灵的名（参见太28:19）。藉此他表明，正如水浇在或洒在身上就洗去污垢一样，藉着圣灵，基督的血同样浇在我们心里3，洗去我们的罪，使我们的灵魂得洁净4；圣灵使我们重生，将我们从可怒之子变为神的儿女5。这一切不是洗礼之水所带来的功效6，而是靠着神的儿子流宝血成就的7。他所流的宝血是我们的红海8，我们必须穿行红海才能逃脱法老，即撒但的辖制，进入属灵的迦南美地。</p>
+<p>因此，牧师为我们施行的是圣洗礼，是人眼所能见的，而神赐我们的是这圣礼所要表明的，即人眼不能见的恩赐和恩典。他洗净我们污秽的、不义的灵魂9，赐我们新心，并使之充满主的安慰；又保证作我们的慈父，给我们披戴新人，脱去旧人和一切旧人的行为10。</p>
+<p>因此，我们相信，凡渴求永生的人都当受洗。人一生只需受洗一次11，不应重复受洗，因为我们不能重生两次。此外，洗礼不是仅在我们受洗的那一刻于我们有益，而是使我们终生受益。正因如此，我们弃绝重洗派的错谬，他们不满足于一生只受一次洗，也强烈反对信徒的婴孩受洗。我们相信，根据神赐给我们儿女的应许12，信徒的婴孩应当受洗，领受圣约的印记，正如过去以色列的婴孩基于同样的应许受割礼一样。基督流血洗除信徒儿女的罪丝毫不亚于洗除成人的罪13。因此，他们应当受基督为他们成就的洗礼这一圣约印记，因为神在律法中吩咐说，孩子出生后不久，母亲就应当为他献上一只羊羔14。这预表着耶稣基督受苦、受死所成就的洗礼。由于洗礼对我们儿女的重要意义等同于割礼对当年以色列百姓的意义，因而保罗称洗礼为“基督的割礼”（西2:11）。</p>
+</div>
+<p class="fn">1. 西2:11　2. 出12:48；彼前2:9　3. 太3:11；林前12:13　4. 徒22:16；来9:14；约壹1:7；启1:5　5. 多3:5　6. 彼前3:21　7. 罗6:3；彼前1:2；2:24　8. 林前10:1-4　9. 林前6:11；弗5:26　10. 罗6:4；加3:27　11. 太28:19；弗4:5　12. 创17:10-12；太19:14；徒2:39　13. 林前7:14　14. 利12:6</p>
+</details>
+<details class="reveal"><summary>📗 多特信经 第一项教义 第十七条 死于婴幼期的信徒儿女</summary>
+<p class="serif">我们须根据神的话语来辨别神的旨意。神宣告说，信徒的儿女是圣洁的，不是因为他们的本性圣洁，而是因为他们与父母共同承受恩典之约1。因此，敬虔的父母不该怀疑在婴幼期被神召回而离世的儿女已蒙了拣选、得了救恩2。</p>
+<p class="fn">1. 创17:7; 赛59:21　2. 徒2:39; 林前7:14</p>
+</details>
+<details class="reveal"><summary>📙 海德堡要理问答 主日27（见第二部分）</summary><p>原文见上方 <a href="#hc">第二部分</a>。</p></details>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz">
+<h2 class="reveal"><span class="n" style="background:var(--crim)">🎯</span>自测小测验</h2>
+<div class="card reveal" id="quizBox"></div>
+</section>
+
+<section id="refs" class="reveal">
+<h2><span class="n" style="background:var(--muted)">🔗</span>参考来源</h2>
+<div class="card"><ul>
+<li>信经与信条原文：<a href="https://ccifellowship.org/books/book-of-praise" target="_blank" rel="noopener">ccifellowship.org 敬拜手册</a>（主日27、比利时信条34、多特I.17、三大信经）</li>
+<li><a href="https://www.ccreformed.org/" target="_blank" rel="noopener">洛杉矶改革宗·恩约教会</a> · <a href="https://www.reformedbeginner.net/" target="_blank" rel="noopener">改革宗初学者</a></li>
+<li><a href="https://canrc.org" target="_blank" rel="noopener">canrc.org</a> · <a href="https://www.urcna.org" target="_blank" rel="noopener">urcna.org</a> · <a href="https://heritagereformed.com" target="_blank" rel="noopener">heritagereformed.com</a> · <a href="https://www.prca.org" target="_blank" rel="noopener">prca.org</a> · <a href="https://opc.org" target="_blank" rel="noopener">opc.org</a></li>
+<li><a href="https://canadianreformedseminary.ca" target="_blank" rel="noopener">CRTS</a> · <a href="https://www.wts.edu" target="_blank" rel="noopener">WTS</a></li>
+<li>圣经经文引自和合本。</li>
+</ul></div>
+</section>
+
+<footer>主与我们建立爱的关系 · 海德堡要理问答主日27 · v1.0 · 2026-10-17 · CCser<br>Soli Deo Gloria</footer>
+</main>
+</div>
+<button class="btn" id="totop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+var b=document.body,mq=matchMedia('(max-width:900px)');
+document.getElementById('tocBtn').onclick=function(){
+  if(mq.matches){b.classList.toggle('toc-on');b.classList.remove('toc-off')}else{b.classList.toggle('toc-off')}
+};
+document.querySelectorAll('#toc a').forEach(function(a){a.addEventListener('click',function(){if(mq.matches)b.classList.remove('toc-on')})});
+var root=document.documentElement;
+try{var s=localStorage.getItem('theme');if(s)root.dataset.theme=s}catch(e){}
+document.getElementById('themeBtn').onclick=function(){
+  var dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+  root.dataset.theme=dark?'light':'dark';try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}
+};
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+var links=[].slice.call(document.querySelectorAll('#toc a'));
+var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+var prog=document.getElementById('prog'),tick=false;
+addEventListener('scroll',function(){if(tick)return;tick=true;requestAnimationFrame(function(){
+  var h=document.documentElement;prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  var cur=0;secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<120)cur=i});
+  links.forEach(function(l,i){l.classList.toggle('on',i===cur)});tick=false;})},{passive:true});
+document.getElementById('totop').onclick=function(){scrollTo({top:0,behavior:'smooth'})};
+document.querySelectorAll('.fc').forEach(function(c){c.onclick=function(){c.classList.toggle('flip')}});
+document.querySelectorAll('[data-tabs]').forEach(function(g){
+  var tabs=g.querySelectorAll('.tab[data-p]');
+  tabs.forEach(function(t){t.onclick=function(){
+    tabs.forEach(function(x){x.classList.remove('on');var p=document.getElementById(x.dataset.p);if(p)p.classList.remove('on')});
+    t.classList.add('on');document.getElementById(t.dataset.p).classList.add('on');}})
+});
+var rb=document.getElementById('reciteBtn'),box=document.getElementById('creedBox');
+rb.onclick=function(){var on=box.classList.toggle('recite');rb.classList.toggle('on',on);
+  box.querySelectorAll('p').forEach(function(p){p.classList.toggle('hide',on);p.classList.remove('show');p.onclick=on?function(){p.classList.toggle('show')}:null})};
+var Q=[
+ ['创17中神向亚伯兰自称什么名号？',['耶和华以勒','全能的神','万军之耶和华','至高的神'],1,'El Shaddai，“全能的神”（17:1）。'],
+ ['主日27第72问：外在的水洗能除去罪吗？',['能，若有信心','能，因洗礼本身有效','不能，唯基督的宝血和圣灵','不能，只有认罪能'],2,'“唯有耶稣基督的宝血和圣灵才能洗去我们一切的罪。”'],
+ ['割礼规定在婴孩出生第几日施行？',['第三日','第七日','第八日','第四十日'],2,'17:12“生下来第八日”。'],
+ ['问74说婴孩当受洗，首要理由是？',['他们无罪','他们与父母同属于神的圣约和教会','为了家族传统','洗礼使他们自动重生'],1,'问74首句。'],
+ ['保罗称洗礼为什么？',['新的逾越节','基督的割礼','灵的膏抹','第二次出生'],1,'西2:11；比利时信条第34条引用。'],
+ ['“正当那日”说明亚伯拉罕的回应是？',['拖延的','即时、全家的顺服','只有他自己','出于恐惧的'],1,'17:23–27。'],
+ ['哪部信经说“我们承认印证了罪得赦免的独一洗礼”？',['使徒信经','尼西亚信经','亚他那修信经','比利时信条'],1,'尼西亚信经。']
+];
+var qb=document.getElementById('quizBox'),score=0,done=0,html='';
+Q.forEach(function(q,i){html+='<div class="qa"><div class="q">'+(i+1)+'. '+q[0]+'</div><div class="tabs" style="margin-top:8px">'+
+ q[1].map(function(o,j){return '<button class="tab" data-q="'+i+'" data-o="'+j+'">'+o+'</button>'}).join('')+'</div><div class="fn" id="qe'+i+'"></div></div>'});
+qb.innerHTML=html+'<p id="qs" style="font-weight:700"></p>';
+qb.addEventListener('click',function(e){var t=e.target;if(!t.dataset||t.dataset.q==null)return;var i=+t.dataset.q,o=+t.dataset.o,ex=document.getElementById('qe'+i);
+ if(ex.dataset.done)return;ex.dataset.done=1;done++;var ok=o===Q[i][2];if(ok)score++;
+ t.style.background=ok?'var(--green)':'var(--crim)';t.style.color='#fff';
+ if(!ok){qb.querySelector('[data-q="'+i+'"][data-o="'+Q[i][2]+'"]').style.outline='2px solid var(--green)'}
+ ex.textContent=(ok?'✅ 正确：':'❌ 答案：')+Q[i][3];
+ if(done===Q.length)document.getElementById('qs').textContent='得分 '+score+' / '+Q.length+(score===Q.length?' 🎉 全对！':' · 再读一遍记忆卡吧');});
+})();
+</script>
+</body>
+</html>
